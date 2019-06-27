@@ -11,9 +11,13 @@ function sleep(ms) {
 var refresh = async () => {
 	try{
 		const browser = await puppeteer.launch({
-		//slowMo: 200, // slow down by 250ms
-		headless: true, // The browser is visible
-		ignoreHTTPSErrors: true
+			args: [
+				'--no-sandbox',
+				'--disable-setuid-sandbox'],
+			//slowMo: 200, // slow down by 250ms
+			headless: true, // The browser is visible
+			ignoreHTTPSErrors: true,
+
 		});
 		const page = await browser.newPage();
 		var data = [];
