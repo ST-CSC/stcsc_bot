@@ -97,7 +97,7 @@ var refresh = async () => {
 		await sleep(3000);
 		for (let index = 0; index < data.length; index++) {
 			const element = data[index];
-			await page.type('body > div.app-container > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div > div > div > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div > div > div', " ").catch((err)=>{console.log(err)});
+			//await page.type('body > div.app-container > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div > div > div > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div > div > div', " ").catch((err)=>{console.log(err)});
 			
 			await page.keyboard.type(element);
 			await page.keyboard.down("Shift");
@@ -124,5 +124,5 @@ var refresh = async () => {
 	}
 }
 console.log("Hello , This means I'm ok !!!!!")
-refresh();
+refresh().catch((e) =>{console.log('error')});
 setInterval(function(){refresh(); console.log("updated")}, 1800000);
