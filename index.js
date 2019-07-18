@@ -83,7 +83,7 @@ var refresh = async () => {
 		await sleep(5000);
 		await page.evaluate(() => {
 			let ele = document.querySelector('input[type="password"]');
-			ele.value = "D4rd4n.!$ufI";
+			ele.value = "D4rd4n.!$ufI2";
 		});
 		await page.click('input[type="submit"]');
 
