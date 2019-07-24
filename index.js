@@ -47,28 +47,28 @@ var refresh = async () => {
 		});
 
 
-		await page.goto('https://oc-statistik.de/index.php');
-		await sleep(5000);
-		await page.evaluate(() => {
-			let ele1 = document.querySelector('input[name="LoginUser"]');
-			ele1.value = "Z-AM000"
-			let ele2 = document.querySelector('input[name="LoginPwd"]');
-			ele2.value  = "Z-AM000-gu274"
-		});
+		// await page.goto('https://oc-statistik.de/index.php');
+		// await sleep(5000);
+		// await page.evaluate(() => {
+		// 	let ele1 = document.querySelector('input[name="LoginUser"]');
+		// 	ele1.value = "Z-AM000"
+		// 	let ele2 = document.querySelector('input[name="LoginPwd"]');
+		// 	ele2.value  = "Z-AM000-gu274"
+		// });
 
 
-		await page.click('button[name="DoLogin"]');
-		await sleep(5000);
-		let content2 = await page.content();
+		// await page.click('button[name="DoLogin"]');
+		// await sleep(5000);
+		// let content2 = await page.content();
 		
-		var $ = cheerio.load(content2);
-		data.push("offene Nachrichten : Z-AM :");
+		// var $ = cheerio.load(content2);
+		// data.push("offene Nachrichten : Z-AM :");
 
 			
 
-		$(`body > div.container > div > div:nth-child(2) > table > tbody > tr > td`).each((i,e)=>{
-			data.push($(e).text());
-		});
+		// $(`body > div.container > div > div:nth-child(2) > table > tbody > tr > td`).each((i,e)=>{
+		// 	data.push($(e).text());
+		// });
 
 		await page.goto('https://web.skype.com');
 
