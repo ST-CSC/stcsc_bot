@@ -104,14 +104,14 @@ var refresh = async () => {
 			await page.keyboard.press(String.fromCharCode(13));
 			await page.keyboard.up("Shift");
 			console.log(index);
-			if(index === 10){
-				await page.keyboard.down("Shift");
-				await page.keyboard.press(String.fromCharCode(13));
-				await page.keyboard.press(String.fromCharCode(13));
-				await page.keyboard.press(String.fromCharCode(13));
-				await page.keyboard.down("Shift");
+			// if(index === 10){
+			// 	await page.keyboard.down("Shift");
+			// 	await page.keyboard.press(String.fromCharCode(13));
+			// 	await page.keyboard.press(String.fromCharCode(13));
+			// 	await page.keyboard.press(String.fromCharCode(13));
+			// 	await page.keyboard.up("Shift");
 
-			}
+			// }
 			
 		}
 
